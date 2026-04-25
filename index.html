@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akar Si Doel — Kue Akar Kelapa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+  <div class="nav-wrap-left">
+    <button class="nav-left" onclick="navigateToTeam()">&#8592;</button>
+    <span class="nav-tooltip tooltip-right">Team Info</span>
+  </div>
+  <div class="nav-wrap-right">
+    <span class="nav-tooltip tooltip-left">Info Produk</span>
+    <button class="nav-right" onclick="navigateToInfo()">&#8594;</button>
+  </div>
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic"></audio>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<!-- HERO HEADER -->
+<div class="hero">
+  <div class="hero-inner">
+    <img src="Gambar/icon.jpeg" alt="Akar Si Doel" class="hero-logo">
+    <div class="hero-text">
+      <h1>Akar <span>Si Doel</span></h1>
+      <p>✦ Kue Akar Kelapa Premium ✦</p>
+    </div>
+    <div class="hero-badge">🏠 Order Sekarang</div>
+  </div>
+</div>
+
+<!-- SECTION TITLE -->
+<div class="section-title">
+  <h2>Menu <span>Pilihan</span></h2>
+  <p class="sub">Homemade · Premium · Tradisional</p>
+  <div class="title-line"></div>
+</div>
+
+<!-- LIST PRODUK -->
+<div class="produk-section">
+  <div id="produk"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Akar Si Doel</strong> — Kue Akar Kelapa Homemade Premium &nbsp;·&nbsp; Dibuat dengan ❤️ penuh cinta
+</div>
+
+<!-- PANEL KERANJANG -->
+<div id="cartPanel" class="cart-panel">
+  <div class="cart-header">
+    <h3>🛒 Keranjang Kamu</h3>
+    <button onclick="toggleCart()">✕</button>
+  </div>
+
+  <div class="cart-body">
+    <div id="keranjang"></div>
+    <div class="cart-total">
+      <span>Total Belanja</span>
+      <span class="total-num" id="total">Rp 0</span>
+    </div>
+  </div>
+
+  <div class="checkout-section">
+    <h3>📦 Detail Pengiriman</h3>
+    <div class="checkout-form">
+      <input type="text" id="namaKelas" placeholder="Nama kamu" />
+      <input type="text" id="kelasTujuan" placeholder="Kelas tujuan" />
+      <textarea id="alamat" placeholder="Alamat lengkap (opsional)"></textarea>
+      <button class="btn-checkout" onclick="checkout()">
+        <img src="Gambar/whatsapp.png" style="width:20px;height:20px;border-radius:50%;">
+        Pesan via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING CART -->
+<div class="float-wrap float-cart-wrap">
+  <span class="float-tooltip">Lihat Keranjang</span>
+  <button class="floating-cart" onclick="toggleCart()">
+    🛒
+    <span id="jumlah" class="badge">0</span>
+  </button>
+</div>
+
+<!-- WA ADMIN -->
+<div class="float-wrap float-wa-wrap">
+  <span class="float-tooltip">Chat Admin</span>
+  <a href="https://wa.me/6285810182924" class="wa-admin" target="_blank">
+    <img src="Gambar/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
+<script src="app.js"></script>
+<script src="music.js"></script>
+</body>
+</html>
